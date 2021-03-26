@@ -7,10 +7,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import java.util.List;
 
@@ -116,7 +114,7 @@ public class ListaNotasActivity extends AppCompatActivity {
 
     private void configuraLayoutManager(RecyclerView listaNotas) {
         //LinearLayoutManager ou GridLayoutManager ou StaggeredGridLayoutManager
-        StaggeredGridLayoutManager linearLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         listaNotas.setLayoutManager(linearLayoutManager);
     }
 
